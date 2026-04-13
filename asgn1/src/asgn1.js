@@ -76,6 +76,7 @@ function addActionsForHtmlUI() {
   document.getElementById('green').onclick = function() { g_selectedColor = [0.0, 1.0, 0.0, 1.0]; };
   document.getElementById('red').onclick = function() { g_selectedColor = [1.0, 0.0, 0.0, 1.0]; };
   document.getElementById('clear').onclick = function() { g_shapesList = []; renderAllShapes(); };
+  document.getElementById('shark').onclick = function() { drawShark(); };
 
   document.getElementById('point').onclick = function() { g_selectedType=POINT };
   document.getElementById('triangle').onclick = function() { g_selectedType=TRIANGLE };
