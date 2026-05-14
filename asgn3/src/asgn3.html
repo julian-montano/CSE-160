@@ -7,36 +7,59 @@
 </head>
 
 <body onload="main()">
-  <canvas id="webgl" width="400" height="400">
-    Please use a browser that supports "canvas"
-  </canvas>
-
-  <p>
-  <div id="fpsDisplay" style="color:black">
-    FPS:
+  <div style="position: relative; display: inline-block;">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      pointer-events: none;
+      text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    ">+</div>
   </div>
-  <p>
-    Click and drag to rotate the camera around the turtle
-  <p>
-    Press W to move forward. Press S to move back
-  <p>
-    Animation:
-    <button type="button" id="animationOn">On</button>
-    <button type="button" id="animationOff">Off</button>
-  <p>
 
-    <script src="../lib/cuon-matrix-cse160.js"></script>
-    <script src="../lib/webgl-utils.js"></script>
-    <script src="../lib/webgl-debug.js"></script>
-    <script src="../lib/cuon-utils.js"></script>
-    <script src="point.js"></script>
-    <script src="asgn3.js"></script>
-    <script src="triangle.js"></script>
-    <script src="circle.js"></script>
-    <script src="animal.js"></script>
-    <script src="cube.js"></script>
-    <script src="torus.js"></script>
-    <script src="camera.js"></script>
+  <div id="fpsDisplay" style="color:black">FPS:</div>
+
+  <div id="controls">
+    <p>Controls:</p>
+    <div style="margin-left: 15px;">
+      <p>Click and drag on the canvas to look around</p>
+      <p>Press W to move forward</p>
+      <p>Press A to move left</p>
+      <p>Press S to move back</p>
+      <p>Press D to move right</p>
+      <p>Press Q to turn left</p>
+      <p>Press E to turn right</p>
+      <p>Left click to delete a block</p>
+      <p>Right click to place a block</p>
+    </div>
+  </div>
+
+  <style>
+    #controls p {
+      margin: 2px 0;
+    }
+  </style>
+
+  <script src="../lib/cuon-matrix-cse160.js"></script>
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="point.js"></script>
+  <script src="cube.js"></script>
+  <script src="triangle.js"></script>
+  <script src="circle.js"></script>
+  <script src="turtle.js"></script>
+  <script src="textures.js"></script>
+  <script src="camera.js"></script>
+  <script src="asgn3.js"></script>
+
 </body>
 
 </html>
